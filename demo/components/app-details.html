@@ -1,0 +1,43 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html" />
+
+<dom-module id="app-details">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <details>
+      <summary>Details</summary>
+        Something small enough to escape casual notice.
+    </details>
+  </template>
+
+  <script>
+    /**
+     * `app-details` Description
+     *
+     * @summary ShortDescription.
+     * @customElement
+     * @polymer
+     * @extends {Polymer.Element}
+     */
+    class AppDetails extends Polymer.Element {
+      /**
+       * String providing the tag name to register the element under.
+       */
+      static get is() {
+        return "app-details";
+      }
+
+      /**
+       * Object describing property-related metadata used by Polymer features
+       */
+      static get properties() {
+        return {};
+      }
+    }
+
+    window.customElements.define(AppDetails.is, AppDetails);
+  </script>
+</dom-module>
