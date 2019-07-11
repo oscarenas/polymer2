@@ -1,20 +1,27 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html" />
 <link rel="import" href="./app-details.html">
+<link rel="import" href="../styles/app-styles.html">
+
 <dom-module id="app-table">
   <template>
-    <style>
+    <style include="app-styles">
       :host {
         display: block;
       }
+      .table thead th.table-headers{
+        font-size: 1.5em;
+        color: #666;
+      }
+      
     </style>
-    <table border="1" cellpadding="10">
+    <table class="table is-hoverable is-fullwidth">
       <thead>
         <tr>
-          <th scope="col">#ID</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Email</th>
-          <th scope="col">Information</th>
+          <th class="table-headers" width="3%" scope="col">#ID</th>
+          <th class="table-headers" width="15%" scope="col">First</th>
+          <th class="table-headers" width="15%" scope="col">Last</th>
+          <th class="table-headers" width="15%" scope="col">Email</th>
+          <th class="table-headers" scope="col">Information</th>
         </tr>
       </thead>
       <tbody>
@@ -23,7 +30,7 @@
           <td>Mark</td>
           <td>Otto</td>
           <td>@mdo</td>
-          <td><app-details></app-details></td>
+          <td><app-details class="div-info"></app-details></td>
         </tr>
         <tr>
           <th scope="row">2</th>

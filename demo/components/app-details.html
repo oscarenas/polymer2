@@ -1,15 +1,73 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html" />
+<link rel="import" href="../styles/app-styles.html">
+<link rel="import" href="../styles/font-poppins.html">
+<link rel="import" href="./app-message.html">
 
 <dom-module id="app-details">
   <template>
-    <style>
+    <style include="app-styles">
       :host {
         display: block;
       }
+
+      details {
+        padding: 1%;
+        border: solid 1px #dddddd;
+        border-radius: 4px;
+      }
+
+      .summary-title {
+        font-size: 16px;
+        color: #0088d1;
+        display: inline-block;
+        font-weight: 600;
+        font-family: 'Poppins';
+      }
+
+      .content {
+        padding: 3%;
+      }
+
+      .message-blue {
+        background-color: rgba(0, 170, 255, 0.557);
+        font-size: 18px;
+        padding: 2%;
+      }
+
+      details[open] summary~* {
+        animation: sweep .5s ease-in-out;
+      }
+
+      @keyframes sweep {
+        0% {
+          opacity: 0;
+          margin-left: -10px
+        }
+
+        100% {
+          opacity: 1;
+          margin-left: 0px
+        }
+      }
     </style>
     <details>
-      <summary>Details</summary>
-        Something small enough to escape casual notice.
+      <summary>
+        <div class="summary-title">
+          Details
+        </div>
+      </summary>
+      <div class="content">
+        <app-message class="message-blue"></app-message>
+        <!--
+            <hr>
+            <div class="message-blue">                
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus
+              quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus
+              diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus.
+              Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque.
+              Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+            </div> -->
+      </div>
     </details>
   </template>
 

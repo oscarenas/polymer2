@@ -1,15 +1,15 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="./app-table.html">
+<link rel="import" href="../styles/app-styles.html">
+
 <dom-module id="app-element">
   <template>
-    <style>
+    <style include="app-styles">
       :host {
         display: block;
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
-    <hr>
-    <h4>Elemento hijo: Tabla</h4>
+    <h2 class="title is-2">[[prop1]]!</h2>   
     <app-table></app-table>
   </template>
 
@@ -28,7 +28,7 @@
         return {
           prop1: {
             type: String,
-            value: 'app-element'
+            value: 'My List'
           }
         };
       }
